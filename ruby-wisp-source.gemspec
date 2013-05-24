@@ -3,8 +3,8 @@ Gem::Specification.new do |s|
   s.version       = File.read 'VERSION'
   s.authors       = ["Yuri Artemev"]
   s.email         = ["i@artemeff.com"]
-  s.description   = %q{TODO: Write a gem description}
-  s.summary       = %q{Source code for wisp}
+  s.description   = %q{Source code for Ruby Wisp compiler}
+  s.summary       = %q{Source code for Wisp}
   s.homepage      = "https://github.com/artemeff/ruby-wisp-source"
   s.license       = "MIT"
 
