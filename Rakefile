@@ -26,13 +26,13 @@ task :update do
   version = ENV['VERSION'] || metadata['dist-tags']['latest']
   tarball = metadata['versions'][version]['dist']['tarball']
 
-  log "Updating stylus source from #{current_version} to #{version}"
+  log "Updating wisp source from #{current_version} to #{version}"
 
   execute "Cleaning up old files", "rm -rf vendor"
-  execute "Download stylus #{version}", "wget #{tarball} -O stylus.tgz"
-  execute "Upacking stylus #{version}", "tar -zxvf stylus.tgz"
-  execute "Cleaning up", "rm -rf stylus.tgz package/.npmignore"
-  execute "Updating stylus dependencies", "mv package vendor && cd vendor && npm install ."
+  execute "Download wisp #{version}", "wget #{tarball} -O wisp.tgz"
+  execute "Upacking wisp #{version}", "tar -zxvf wisp.tgz"
+  execute "Cleaning up", "rm -rf wisp.tgz package/.npmignore"
+  execute "Updating wisp dependencies", "mv package vendor && cd vendor && npm install ."
   log "Updating VERSION file"
   File.open('VERSION', 'w') { |file| file.write version }
   log "Done!"
